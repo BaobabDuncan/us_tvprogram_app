@@ -1,0 +1,63 @@
+<html>
+  <head>
+	<meta charset="UTF-8" />
+    <title>TvProgram</title>
+    
+    <!-- Application my style sheet file -->
+    <link rel="stylesheet" type="text/css" href="./css/mystyle.css"/>	
+	
+    <!-- jQuery and jQtouch script file -->
+    <style type="text/css" media="screen">@import "./jqtouch/jqtouch.css";</style>
+    <style type="text/css" media="screen">@import "./themes/jqt/theme.css";</style>
+    <script src="./jqtouch/jquery-1.4.2.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="./jqtouch/jqtouch.js" type="application/x-javascript" charset="utf-8"></script>	
+    
+    <!-- extensions script file -->
+	
+    <script type="text/javascript" src="./js/global.js" charset="utf-8"></script>
+    <script type="text/javascript" src="./js/tv_script.js" charset="utf-8"></script>
+    
+    <script type="text/javascript" charset="utf-8">
+		var jQT = new $.jQTouch({
+			icon:'jqtouch.png'		  
+		});	
+	  	
+		function onBodyLoad(){			
+		  onDeviceReady();
+		}
+		function onDeviceReady(){          
+
+		}
+    </script>
+    
+  </head>
+  <body onload="onBodyLoad()">
+    <div id="jqt">      
+      <div id="menu">
+        <div class="toolbar">
+		  <h1>TV Program</h1>		  
+		</div>
+        <ul class="rounded">
+          <li class="arrow"><a title='1' class='move_broadcasting' href="#">지상파</a></li>
+          <li class="arrow"><a title='2' class='move_broadcasting' href="#">케이블</a></li>
+        </ul>
+      </div>
+      
+      <div id="broadcasting">
+        <div class="toolbar">
+		  <h1>방송국</h1>
+		  <a href="#" class="back">Back</a>
+		</div>
+		<div id="broadcasting-wrapper"></div>
+      </div>
+      
+      <div id="timetable">
+        <div class="toolbar">
+		  <h1>방송시간표</h1>
+		  <a href="#" class="back">Back</a>
+		</div>
+		<div id="timetable-wrapper"></div>
+      </div>
+    </div>
+  </body>
+</html>
